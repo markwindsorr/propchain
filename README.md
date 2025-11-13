@@ -4,6 +4,8 @@ Property management platform with React frontend and Node.js backend.
 
 ## Quick Start
 
+**Check Commit history to see development flow**
+
 ### 1. Install Dependencies
 
 ```bash
@@ -33,18 +35,19 @@ npm start
 ```
 
 This starts both:
-- **Frontend** at `http://localhost:5173`
-- **Backend API** at `http://localhost:8000`
+
+-   **Frontend** at `http://localhost:5173`
+-   **Backend API** at `http://localhost:8000`
 
 ## Available Scripts
 
-- `npm install` - Install all dependencies
-- `npm start` - Run both frontend and backend
-- `npm run dev` - Run frontend only
-- `npm run server` - Run backend only
-- `npm run build` - Build frontend for production
-- `npm run lint` - Run ESLint
-- `npm test` - Run tests (see Testing section below)
+-   `npm install` - Install all dependencies
+-   `npm start` - Run both frontend and backend
+-   `npm run dev` - Run frontend only
+-   `npm run server` - Run backend only
+-   `npm run build` - Build frontend for production
+-   `npm run lint` - Run ESLint
+-   `npm test` - Run tests (see Testing section below)
 
 ## Testing
 
@@ -53,6 +56,7 @@ The project includes unit tests for wallet utilities using Vitest.
 ### Running Tests
 
 **In WSL/Linux:**
+
 ```bash
 npm test
 ```
@@ -61,10 +65,10 @@ npm test
 
 ### Test Coverage
 
-- `src/utils/wallet.test.ts` - Tests for wallet utility functions
-  - Address truncation
-  - MetaMask detection
-  - Error message handling
+-   `src/utils/wallet.test.ts` - Tests for wallet utility functions
+    -   Address truncation
+    -   MetaMask detection
+    -   Error message handling
 
 ## Project Structure
 
