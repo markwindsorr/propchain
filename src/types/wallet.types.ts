@@ -2,7 +2,6 @@ export interface WalletState {
 	address: string | null
 	isConnected: boolean
 	isConnecting: boolean
-	chainId: string | null
 }
 
 export interface WalletError {
@@ -22,8 +21,6 @@ declare global {
 		ethereum?: {
 			isMetaMask?: boolean
 			request: (args: { method: string; params?: unknown[] }) => Promise<unknown>
-			on: (event: string, callback: (...args: unknown[]) => void) => void
-			removeListener: (event: string, callback: (...args: unknown[]) => void) => void
 		}
 	}
 }
