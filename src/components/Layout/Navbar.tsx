@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Search, Heart, User, Wallet } from 'lucide-react';
+import { Home, Wallet } from 'lucide-react';
+import { truncateAddress } from '../../utils/wallet';
 
 interface NavbarProps {
   onConnectWallet: () => void;
   walletConnected: boolean;
+  walletAddress: string | null;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onConnectWallet, walletConnected }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onConnectWallet, walletConnected, walletAddress }) => {
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -81,7 +83,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onConnectWallet, walletConnected
             >
               <Wallet className="w-4 h-4" />
               <span className="hidden sm:block">
-                {walletConnected ? 'Wallet Connected' : 'Connect Wallet'}
+                {walletConnected && walletAddress ? truncateAddress(walletAddress) : 'Connect Wallet'}
               </span>
             </button>
           </div>

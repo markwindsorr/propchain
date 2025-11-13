@@ -38,8 +38,33 @@ This starts both:
 
 ## Available Scripts
 
-- `npm run install:all` - Install all dependencies
+- `npm install` - Install all dependencies
 - `npm start` - Run both frontend and backend
+- `npm run dev` - Run frontend only
+- `npm run server` - Run backend only
+- `npm run build` - Build frontend for production
+- `npm run lint` - Run ESLint
+- `npm test` - Run tests (see Testing section below)
+
+## Testing
+
+The project includes unit tests for wallet utilities using Vitest.
+
+### Running Tests
+
+**In WSL/Linux:**
+```bash
+npm test
+```
+
+**Note:** Tests are configured with Vitest and work correctly in WSL/Linux environments. Due to Vitest worker thread limitations in Git Bash/Windows environments, tests may timeout when run directly from Git Bash or PowerShell. If you encounter issues, run tests from WSL.
+
+### Test Coverage
+
+- `src/utils/wallet.test.ts` - Tests for wallet utility functions
+  - Address truncation
+  - MetaMask detection
+  - Error message handling
 
 ## Project Structure
 
